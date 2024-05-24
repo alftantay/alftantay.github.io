@@ -1,9 +1,15 @@
-const btnLike1 = document.getElementById("btnLike1")
-const count1 = document.getElementById("count1")
+const like1 = document.getElementById("btnLike1");
+const count1 = document.getElementById("count1");
+const remarks1 = document.getElementById("remarks1");
 
 function likeEvent1() {
-  let countLike1 = parseInt(count1.value) + 1;
-  count1.textContent = countLike1.toString();
-  console.log(countLike1.toString());
+    let countLike1 = parseInt(count1.value) + 1;
+    count1.textContent = countLike1.toString();
+    if (parseInt(count1.value) <= 5) {
+        remarks1.textContent = "Kulang sa paligo";
+    } else if (parseInt(count1.value) > 5) {
+        remarks1.textContent = "Pinagpala ng Maykapal sa kagwapuhan";
+    }
 }
-btnLike1.addEventListener("click", likeEvent1)
+
+like1.addEventListener("click", likeEvent1);
