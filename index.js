@@ -20,7 +20,8 @@ const comment = document.getElementById("comment")
 const submit  = document.getElementById("submit")
 const commentbox = document.getElementById("commentbox")
 function submitComment(){
-    commentbox.textContent += comment.value.toString() + "\n"
+    commentbox.textContent += comment.value.toString() + "\n";
+     commentbox.value="";
 }
 submit.addEventListener("click",submitComment)
 
